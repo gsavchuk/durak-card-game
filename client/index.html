@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>Durak</title>
+	<link href="durak.css" rel="stylesheet">
 	<script src="react.js"></script>
 	<script src="react-dom.js"></script>
+	<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
   <script src="durak.js"></script>
 </head>
 <body>
@@ -10,5 +14,21 @@
 	<div id="table_section"></div>
 	<div id="talon_section"></div>
 	<div id="log_section"></div>
+	<script type="text/babel">
+var Card = React.createClass({
+  render: function() {
+    return (
+      <div className="card">
+				<div className="rank_corner">7p</div>
+				<div className="rank_center">7p</div>
+      </div>
+    );
+  }
+});
+ReactDOM.render(
+  <Card />,
+  document.getElementById('cards_section')
+);
+	</script>
 </body>
 </html>
