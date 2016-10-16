@@ -2,6 +2,7 @@
 	height: 10em;
 	width: 5em;
 	border: 1px solid;
+	display: inline-block;
 }
 
 .rank_center {

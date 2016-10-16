@@ -15,19 +15,37 @@
 	<div id="talon_section"></div>
 	<div id="log_section"></div>
 	<script type="text/babel">
-var Card = React.createClass({
-  render: function() {
+const Card = React.createClass({
+	render: function() {
+		const p = this.props,
+					text = p.rank + p.suit;
     return (
-      <div className="card">
-				<div className="rank_corner">7p</div>
-				<div className="rank_center">7p</div>
-      </div>
+      <li className="card">
+				<div className="rank_corner">{text}</div>
+				<div className="rank_center">{text}</div>
+      </li>
     );
   }
 });
-ReactDOM.render(
-  <Card />,
-  document.getElementById('cards_section')
+
+const CardList = React.createClass({
+	getInitialState: function() {
+		return {cards: []};
+	},
+	render: function() {
+		const cards = this.state.cards.map((card) => {
+			return (
+				<Card rank={card.rank} suit={card.suit} />
+			);
+		});
+		return (
+			<ul>{cards}</ul>
+		);
+	}
+});
+
+const cardsOnHands = ReactDOM.render(
+	<CardList />, document.getElementById('cards_section')
 );
 	</script>
 </body>
