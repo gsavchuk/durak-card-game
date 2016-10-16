@@ -1,0 +1,14 @@
+{
+  "name": "durak_server",
+  "version": "1.0.0",
+  "description": "A server for durak online game.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gsavchuk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
